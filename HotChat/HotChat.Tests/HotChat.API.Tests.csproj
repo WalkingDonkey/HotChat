@@ -52,9 +52,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HotChat\HotChat.csproj">
+    <ProjectReference Include="..\HotChat\HotChat.API.csproj">
       <Project>{EC7C1252-1D75-40C1-8CF5-69313BE3697E}</Project>
-      <Name>HotChat</Name>
+      <Name>HotChat.API</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
