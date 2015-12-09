@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace HotChat.Tests
+namespace HotChat.API.Tests
 {
     [TestClass]
     public class UnitTest1

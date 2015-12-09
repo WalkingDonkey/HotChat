@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.API", "HotChat\HotChat.API.csproj", "{EC7C1252-1D75-40C1-8CF5-69313BE3697E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.API", "HotChat.API\HotChat.API.csproj", "{EC7C1252-1D75-40C1-8CF5-69313BE3697E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.API.Tests", "HotChat.Tests\HotChat.API.Tests.csproj", "{4A146F63-59FD-46C3-BE7B-F0DB2DFFE451}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.API.Tests", "HotChat.API.Tests\HotChat.API.Tests.csproj", "{4A146F63-59FD-46C3-BE7B-F0DB2DFFE451}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{BD21EC22-B67B-4391-A974-70705AA7475E}"
 EndProject

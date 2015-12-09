@@ -6,8 +6,8 @@
     <ProjectGuid>{4A146F63-59FD-46C3-BE7B-F0DB2DFFE451}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HotChat.Tests</RootNamespace>
-    <AssemblyName>HotChat.Tests</AssemblyName>
+    <RootNamespace>HotChat.API.Tests</RootNamespace>
+    <AssemblyName>HotChat.API.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -52,7 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HotChat\HotChat.API.csproj">
+    <ProjectReference Include="..\HotChat.API\HotChat.API.csproj">
       <Project>{EC7C1252-1D75-40C1-8CF5-69313BE3697E}</Project>
       <Name>HotChat.API</Name>
     </ProjectReference>
