@@ -1,4 +1,7 @@
-﻿using System;
+﻿using HotChat.API.Models;
+using HotChat.BO;
+using HotChat.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,6 +13,20 @@ namespace HotChat.API.Controllers.V1
     [RoutePrefix("api/v2/user")]
     public class UserController : ApiController
     {
+        IUserService _userService;
+
+        public UserController(IUserService userService)
+        {
+            _userService = userService;
+        }
+
+        // POST api/<controller>/register
+        public UserDTO Register(UserDTO userDTO)
+        {
+            UserBO userBO = _userService.Register(null);
+            return null;
+        }
+
         // GET api/<controller>
         public IEnumerable<string> Get()
         {

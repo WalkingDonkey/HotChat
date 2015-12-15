@@ -40,12 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Implementation\UserService.cs" />
+    <Compile Include="Interface\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Implementation\" />
-    <Folder Include="Interface\" />
+    <ProjectReference Include="..\HotChat.BO\HotChat.BO.csproj">
+      <Project>{0ff0afac-3261-49dc-8b5c-abefa54b692b}</Project>
+      <Name>HotChat.BO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

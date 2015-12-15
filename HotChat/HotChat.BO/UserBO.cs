@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HotChat.BO
 {
-    public class Class1
+    public class UserBO
     {
     }
 }
