@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotChat.DataContract
+namespace Framework
 {
     public class Class1
     {

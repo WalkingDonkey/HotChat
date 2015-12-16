@@ -1,11 +1,6 @@
 ﻿using HotChat.BO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace HotChat.Service
+namespace HotChat.Service.Interface
 {
     public interface IUserService
     {

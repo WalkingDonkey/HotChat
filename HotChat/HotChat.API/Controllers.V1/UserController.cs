@@ -1,19 +1,16 @@
-﻿using HotChat.API.Models;
-using HotChat.BO;
-using HotChat.Service;
-using System;
+﻿using HotChat.BO;
+using HotChat.DataContract.DTO;
+using HotChat.Framework.Utility;
+using HotChat.Service.Interface;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace HotChat.API.Controllers.V1
 {
-    [RoutePrefix("api/v2/user")]
+    [RoutePrefix("api/v1/user")]
     public class UserController : ApiController
     {
-        IUserService _userService;
+        private IUserService _userService;
 
         public UserController(IUserService userService)
         {
@@ -23,7 +20,7 @@ namespace HotChat.API.Controllers.V1
         // POST api/<controller>/register
         public UserDTO Register(UserDTO userDTO)
         {
-            UserBO userBO = _userService.Register(null);
+            UserBO userBO = _userService.Register(userDTO.TOBO());
             return null;
         }
 

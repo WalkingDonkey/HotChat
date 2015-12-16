@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using HotChat.API.App_Start;
+using HotChat.Framework.Utility;
 using System.Web.Http;
-using System.Web.Routing;
 
 namespace HotChat.API
 {
@@ -12,6 +9,7 @@ namespace HotChat.API
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            AutoMapperConfiguration.ConfigureAutoMapper();
         }
     }
 }

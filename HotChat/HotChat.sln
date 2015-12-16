@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.API", "HotChat.API\HotChat.API.csproj", "{EC7C1252-1D75-40C1-8CF5-69313BE3697E}"
 EndProject
@@ -22,6 +22,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.DAL", "HotChat.DAL\HotChat.DAL.csproj", "{EB8EF597-F8F6-4A06-A531-4F004C33F0D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.Repository", "HotChat.Repository\HotChat.Repository.csproj", "{CE1CEFE1-86FF-4C2E-977A-5822CB8E10F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.Framework", "HotChat.Framework\HotChat.Framework.csproj", "{CE40364F-0846-4E0B-8E76-05919C7FDE4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.Repository.Mongo", "HotChat.Repository.Mongo\HotChat.Repository.Mongo.csproj", "{F1B53160-B915-4725-A75E-CCBF546AD9F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{CE1CEFE1-86FF-4C2E-977A-5822CB8E10F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE1CEFE1-86FF-4C2E-977A-5822CB8E10F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE1CEFE1-86FF-4C2E-977A-5822CB8E10F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE40364F-0846-4E0B-8E76-05919C7FDE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE40364F-0846-4E0B-8E76-05919C7FDE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE40364F-0846-4E0B-8E76-05919C7FDE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE40364F-0846-4E0B-8E76-05919C7FDE4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B53160-B915-4725-A75E-CCBF546AD9F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B53160-B915-4725-A75E-CCBF546AD9F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B53160-B915-4725-A75E-CCBF546AD9F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B53160-B915-4725-A75E-CCBF546AD9F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,5 +80,6 @@ Global
 		{0FF0AFAC-3261-49DC-8B5C-ABEFA54B692B} = {A41FF9AD-3848-4612-B98D-24B9F8904F27}
 		{EB8EF597-F8F6-4A06-A531-4F004C33F0D6} = {1160CC61-F573-45AC-B315-CBBCCBE3A27E}
 		{CE1CEFE1-86FF-4C2E-977A-5822CB8E10F8} = {1160CC61-F573-45AC-B315-CBBCCBE3A27E}
+		{F1B53160-B915-4725-A75E-CCBF546AD9F5} = {1160CC61-F573-45AC-B315-CBBCCBE3A27E}
 	EndGlobalSection
 EndGlobal
