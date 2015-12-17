@@ -1,5 +1,5 @@
 ﻿using HotChat.BO;
-using HotChat.DataContract.DTO;
+using HotChat.DTO;
 using HotChat.Framework.Utility;
 using HotChat.Service.Interface;
 using System.Collections.Generic;
@@ -18,10 +18,17 @@ namespace HotChat.API.Controllers.V1
         }
 
         // POST api/<controller>/register
-        public UserDTO Register(UserDTO userDTO)
+        [Route("register")]
+        public UserDTO Register()
         {
+            UserDTO userDTO = new UserDTO
+            {
+                UserId = "1234",
+                UserName = "1jack",
+                Password = "abc"
+            };
             UserBO userBO = _userService.Register(userDTO.TOBO());
-            return null;
+            return userBO.TODTO();
         }
 
         // GET api/<controller>

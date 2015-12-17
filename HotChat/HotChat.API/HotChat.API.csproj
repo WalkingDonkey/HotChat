@@ -110,7 +110,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\UnityConfig.cs" />
@@ -140,17 +142,17 @@
       <Project>{0ff0afac-3261-49dc-8b5c-abefa54b692b}</Project>
       <Name>HotChat.BO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HotChat.DataContract\HotChat.DataContract.csproj">
+    <ProjectReference Include="..\HotChat.DataContract\HotChat.DTO.csproj">
       <Project>{e4e7d82b-7303-4edd-a6e3-73ebd26ae89a}</Project>
-      <Name>HotChat.DataContract</Name>
+      <Name>HotChat.DTO</Name>
     </ProjectReference>
     <ProjectReference Include="..\HotChat.Framework\HotChat.Framework.csproj">
       <Project>{ce40364f-0846-4e0b-8e76-05919c7fde4e}</Project>
       <Name>HotChat.Framework</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HotChat.Service\HotChat.Service.csproj">
-      <Project>{b2015fea-1736-4d28-a783-29708b9c9bb1}</Project>
-      <Name>HotChat.Service</Name>
+    <ProjectReference Include="..\HotChat.Service.Interface\HotChat.Service.Interface.csproj">
+      <Project>{c4a8c7c2-e2c5-4284-b0e7-ca748288d9f3}</Project>
+      <Name>HotChat.Service.Interface</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

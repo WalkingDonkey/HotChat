@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HotChat.Service.Impl")]
+[assembly: AssemblyTitle("HotChat.Service.Interface")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HotChat.Service.Impl")]
+[assembly: AssemblyProduct("HotChat.Service.Interface")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b2015fea-1736-4d28-a783-29708b9c9bb1")]
+[assembly: Guid("c4a8c7c2-e2c5-4284-b0e7-ca748288d9f3")]
 
 // Version information for an assembly consists of the following four values:
 //

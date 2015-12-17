@@ -1,8 +1,6 @@
 using System;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
-using HotChat.Service.Interface;
-using HotChat.Service.Implementation;
 
 namespace HotChat.API.App_Start
 {

@@ -1,15 +1,12 @@
 ﻿using HotChat.BO;
+using HotChat.DAO;
+using HotChat.Framework.Utility;
 using HotChat.Repository.Interface;
 using HotChat.Repository.Mongo.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace HotChat.Repository.Mongo.Implementation
+namespace HotChat.Repository.Mongo.Impl
 {
-    public class UserRepository : Repository<UserBO, string>, IUserRepository
+    public class UserRepository : Repository<User, string>, IUserRepository
     {
         private const string _collectionName = "Users";
         public UserRepository()
@@ -19,7 +16,7 @@ namespace HotChat.Repository.Mongo.Implementation
 
         public UserBO Register(UserBO userBO)
         {
-            Add(userBO);
+            Add(userBO.TODAO());
             return userBO;
         }
     }

@@ -2,7 +2,7 @@
 using HotChat.Repository.Interface;
 using HotChat.Service.Interface;
 
-namespace HotChat.Service.Implementation
+namespace HotChat.Service.Impl
 {
     public class UserService : IUserService
     {

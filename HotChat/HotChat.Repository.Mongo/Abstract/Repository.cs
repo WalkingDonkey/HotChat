@@ -21,8 +21,8 @@ namespace HotChat.Repository.Mongo.Abstract
 
         static Repository()
         {
-            var client = new MongoClient("");
-            _db = client.GetDatabase("");
+            var client = new MongoClient("mongodb://127.0.0.1:27017");
+            _db = client.GetDatabase("HotChat");
         }
 
         private IMongoCollection<TEntity> GetCollection()
@@ -32,7 +32,8 @@ namespace HotChat.Repository.Mongo.Abstract
 
         public virtual void Add(TEntity entity)
         {
-            GetCollection().InsertOneAsync(entity);
+            IMongoCollection<TEntity> collection = GetCollection();
+            collection.InsertOne(entity);
         }
 
         public virtual void Delete(TKey key)

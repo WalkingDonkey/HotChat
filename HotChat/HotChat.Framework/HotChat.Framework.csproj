@@ -52,9 +52,13 @@
       <Project>{0ff0afac-3261-49dc-8b5c-abefa54b692b}</Project>
       <Name>HotChat.BO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HotChat.DataContract\HotChat.DataContract.csproj">
+    <ProjectReference Include="..\HotChat.DAO\HotChat.DAO.csproj">
+      <Project>{08bc1e35-02ed-4d63-8ea8-5d6c794e8ca0}</Project>
+      <Name>HotChat.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HotChat.DataContract\HotChat.DTO.csproj">
       <Project>{e4e7d82b-7303-4edd-a6e3-73ebd26ae89a}</Project>
-      <Name>HotChat.DataContract</Name>
+      <Name>HotChat.DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

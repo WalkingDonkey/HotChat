@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B2015FEA-1736-4D28-A783-29708B9C9BB1}</ProjectGuid>
+    <ProjectGuid>{CE1CEFE1-86FF-4C2E-977A-5822CB8E10F8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HotChat.Service</RootNamespace>
-    <AssemblyName>HotChat.Service</AssemblyName>
+    <RootNamespace>HotChat.Repository.Interface</RootNamespace>
+    <AssemblyName>HotChat.Repository.Interface</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,22 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\UserService.cs" />
-    <Compile Include="Interface\IUserService.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\HotChat.BO\HotChat.BO.csproj">
       <Project>{0ff0afac-3261-49dc-8b5c-abefa54b692b}</Project>
       <Name>HotChat.BO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HotChat.Repository\HotChat.Repository.csproj">
-      <Project>{ce1cefe1-86ff-4c2e-977a-5822cb8e10f8}</Project>
-      <Name>HotChat.Repository</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repository\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
