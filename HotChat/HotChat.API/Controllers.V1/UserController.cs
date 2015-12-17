@@ -23,12 +23,12 @@ namespace HotChat.API.Controllers.V1
         {
             UserDTO userDTO = new UserDTO
             {
-                UserId = "1234",
+                UserId = "12345",
                 UserName = "1jack",
                 Password = "abc"
             };
-            UserBO userBO = _userService.Register(userDTO.TOBO());
-            return userBO.TODTO();
+            UserBO userBO = _userService.Register(userDTO.Map<UserDTO, UserBO>());
+            return userBO.Map<UserBO, UserDTO>();
         }
 
         // GET api/<controller>

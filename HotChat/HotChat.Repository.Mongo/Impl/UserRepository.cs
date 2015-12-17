@@ -16,7 +16,7 @@ namespace HotChat.Repository.Mongo.Impl
 
         public UserBO Register(UserBO userBO)
         {
-            Add(userBO.TODAO());
+            Add(userBO.Map<UserBO, User>());
             return userBO;
         }
     }

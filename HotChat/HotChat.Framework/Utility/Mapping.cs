@@ -18,24 +18,24 @@ namespace HotChat.Framework.Utility
 
     public static class Mapping
     {
-        public static UserBO TOBO(this UserDTO userDTO)
+        public static TTo Map<TFrom, TTo>(this TFrom userDTO)
         {
-            return Mapper.Map<UserBO>(userDTO);
+            return Mapper.Map<TTo>(userDTO);
         }
 
-        public static UserDTO TODTO(this UserBO userBO)
-        {
-            return Mapper.Map<UserDTO>(userBO);
-        }
+        //public static UserDTO TODTO(this UserBO userBO)
+        //{
+        //    return Mapper.Map<UserDTO>(userBO);
+        //}
 
-        public static UserBO TOBO(this User user)
-        {
-            return Mapper.Map<UserBO>(user);
-        }
+        //public static UserBO TOBO(this User user)
+        //{
+        //    return Mapper.Map<UserBO>(user);
+        //}
 
-        public static User TODAO(this UserBO userBO)
-        {
-            return Mapper.Map<User>(userBO);
-        }
+        //public static User TODAO(this UserBO userBO)
+        //{
+        //    return Mapper.Map<User>(userBO);
+        //}
     }
 }
