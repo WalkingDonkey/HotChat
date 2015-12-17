@@ -1,5 +1,4 @@
 ﻿using HotChat.Repository.Interface;
-using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace HotChat.Repository.Mongo.Abstract
@@ -20,7 +19,7 @@ namespace HotChat.Repository.Mongo.Abstract
             _db = client.GetDatabase("HotChat");
         }
 
-        private IMongoCollection<TEntity> GetCollection()
+        public IMongoCollection<TEntity> GetCollection()
         {
             return _db.GetCollection<TEntity>(_collectionName);
         }
