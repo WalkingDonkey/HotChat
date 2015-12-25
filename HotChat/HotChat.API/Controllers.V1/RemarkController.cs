@@ -7,32 +7,23 @@ using System.Web.Http;
 
 namespace HotChat.API.Controllers.V1
 {
-   [RoutePrefix("api/v1/user")]
-   public class UserController : ApiController
+   [RoutePrefix("api/v1/remark")]
+   public class RemarkController : ApiController
    {
-      private IUserService _userService;
+      private IRemarkService _remarkService;
 
-      public UserController(IUserService userService)
+      public RemarkController(IRemarkService remarkService)
       {
-         _userService = userService;
+         _remarkService = remarkService;
       }
 
-      // POST api/<controller>/register
+      // GET api/<controller>/remark
       [Route("register")]
-      public UserDTO Register(UserDTO userDTO)
+      public UserDTO Remark(string userId)
       {
          UserBO userBO = _userService.Register(userDTO.Map<UserDTO, UserBO>());
          return userBO.Map<UserBO, UserDTO>();
       }
-
-      // Get api/<controller>/signin
-      [Route("signin")]
-      public UserDTO SignIn(UserDTO userDTO)
-      {
-         return null;
-      }
-
-
 
       // GET api/<controller>
       public IEnumerable<string> Get()
