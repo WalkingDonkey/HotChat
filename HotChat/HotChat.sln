@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.API", "HotChat.API\HotChat.API.csproj", "{EC7C1252-1D75-40C1-8CF5-69313BE3697E}"
 EndProject
@@ -32,6 +32,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{89B80A4F-8F6D-49B1-8407-097A06D9B0A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.DAO", "HotChat.DAO\HotChat.DAO.csproj", "{08BC1E35-02ED-4D63-8EA8-5D6C794E8CA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.Common", "HotChat.Common\HotChat.Common.csproj", "{DE6E8D40-1016-4B0C-B7FC-48C6929BBA83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +85,10 @@ Global
 		{08BC1E35-02ED-4D63-8EA8-5D6C794E8CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08BC1E35-02ED-4D63-8EA8-5D6C794E8CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08BC1E35-02ED-4D63-8EA8-5D6C794E8CA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE6E8D40-1016-4B0C-B7FC-48C6929BBA83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE6E8D40-1016-4B0C-B7FC-48C6929BBA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE6E8D40-1016-4B0C-B7FC-48C6929BBA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE6E8D40-1016-4B0C-B7FC-48C6929BBA83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,5 +104,6 @@ Global
 		{F1B53160-B915-4725-A75E-CCBF546AD9F5} = {1160CC61-F573-45AC-B315-CBBCCBE3A27E}
 		{C4A8C7C2-E2C5-4284-B0E7-CA748288D9F3} = {A41FF9AD-3848-4612-B98D-24B9F8904F27}
 		{08BC1E35-02ED-4D63-8EA8-5D6C794E8CA0} = {89B80A4F-8F6D-49B1-8407-097A06D9B0A7}
+		{DE6E8D40-1016-4B0C-B7FC-48C6929BBA83} = {89B80A4F-8F6D-49B1-8407-097A06D9B0A7}
 	EndGlobalSection
 EndGlobal

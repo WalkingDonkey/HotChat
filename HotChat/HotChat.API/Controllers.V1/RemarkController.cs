@@ -17,45 +17,11 @@ namespace HotChat.API.Controllers.V1
          _remarkService = remarkService;
       }
 
-      // GET api/<controller>/remark
-      [Route("register")]
-      public UserDTO Remark(string userId)
+      // POST api/<controller>/add
+      [Route("add")]
+      public void AddRemark(RemarkDTO remarkDTO)
       {
-         UserBO userBO = _userService.Register(userDTO.Map<UserDTO, UserBO>());
-         return userBO.Map<UserBO, UserDTO>();
-      }
-
-      // GET api/<controller>
-      public IEnumerable<string> Get()
-      {
-         return new string[] { "value1", "value2" };
-      }
-
-      // GET api/<controller>/5
-      // Must add "Route" attribute if we want "RoutePrefix" workable.
-      [Route("getuser/{id}")]
-      public string Get(int id)
-      {
-         return id.ToString();
-      }
-
-      // POST api/<controller>
-      public void Post([FromBody]string value)
-      {
-         int i = 3;
-         i++;
-      }
-
-      // PUT api/<controller>/5
-      public void Put(int id, [FromBody]string value)
-      {
-         int i = 9;
-         i++;
-      }
-
-      // DELETE api/<controller>/5
-      public void Delete(int id)
-      {
+         _remarkService.Add(remarkDTO.Map<RemarkDTO, RemarkBO>());
       }
    }
 }

@@ -4,6 +4,6 @@ namespace HotChat.Service.Interface
 {
     public interface IRemarkService
     {
-        UserBO Register(string userId);
+        void Add(RemarkBO remarkBO);
     }
 }
