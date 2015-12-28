@@ -35,6 +35,7 @@ namespace HotChat.API.Controllers.V1
 
 
       // GET api/<controller>
+      [Route("get")]
       public IEnumerable<string> Get()
       {
          return new string[] { "value1", "value2" };

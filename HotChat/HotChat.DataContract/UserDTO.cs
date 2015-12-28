@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 
 namespace HotChat.DTO
-{
+{ 
     public class UserDTO
     {
         [JsonProperty]

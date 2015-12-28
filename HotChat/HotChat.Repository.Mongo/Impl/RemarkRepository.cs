@@ -5,6 +5,7 @@ using HotChat.Repository.Interface;
 using HotChat.Repository.Mongo.Abstract;
 using MongoDB.Driver;
 using System;
+using System.Collections.Generic;
 
 namespace HotChat.Repository.Mongo.Impl
 {
@@ -22,17 +23,16 @@ namespace HotChat.Repository.Mongo.Impl
          var collection = GetCollection();
          var filter = Builders<RemarksDAO>.Filter.Eq("UserId", toUserId);
          var updater = Builders<RemarksDAO>.Update.Push("Remarks", remarkBO.Map<RemarkBO, Remark>());
-         if(collection.Find(filter).First() == null)
+         if (collection.Count(filter) == 0)
          {
-
+            RemarksDAO dao = new RemarksDAO(toUserId);
+            dao.Add(remarkBO.Map<RemarkBO, Remark>());
+            collection.InsertOne(dao);
          }
-      }
-
-      public bool Exist(string userId)
-      {
-         var collection = GetCollection();
-         var filter = Builders<RemarksDAO>.Filter.Eq("UserId", userId);
-         return collection.Find(filter).First() != null;
+         else
+         {
+            collection.FindOneAndUpdate(filter, updater);
+         }
       }
    }
 }

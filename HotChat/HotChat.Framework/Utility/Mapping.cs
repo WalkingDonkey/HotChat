@@ -14,16 +14,21 @@ namespace HotChat.Framework.Utility
          Mapper.CreateMap<UserBO, UserDAO>();
          Mapper.CreateMap<UserDAO, UserBO>();
          Mapper.CreateMap<RemarkDTO, RemarkBO>();
+         Mapper.CreateMap<RemarkBO, Remark>();
       }
    }
 
    public static class Mapping
    {
-      public static TTo Map<TFrom, TTo>(this TFrom userDTO)
+      public static TTo Map<TFrom, TTo>(this TFrom from)
       {
-         return Mapper.Map<TTo>(userDTO);
+         return Mapper.Map<TTo>(from);
       }
 
+      //public static Remark RemarkBO2Remark<RemarkBO, Remark>(this RemarkBO remarkBO)
+      //{
+      //   Mapper.Map<Remark>(remarkBO).;
+      //}
       //public static UserDTO TODTO(this UserBO userBO)
       //{
       //    return Mapper.Map<UserDTO>(userBO);
