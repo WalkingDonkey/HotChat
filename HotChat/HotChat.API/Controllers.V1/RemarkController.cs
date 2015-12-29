@@ -17,15 +17,17 @@ namespace HotChat.API.Controllers.V1
          _remarkService = remarkService;
       }
 
-      // POST api/<controller>/add
-      [Route("remark")]
+      // POST api/v1/<controller>/
+      [Route("")]
+      [HttpPost]
       public void AddRemark(RemarkDTO remarkDTO)
       {
          _remarkService.AddRemark(remarkDTO.ToUserId, remarkDTO.Map<RemarkDTO, Remark>());
       }
 
-      // GET api/<controller>/get
+      // GET api/v1/<controller>/remarks/<userId>
       [Route("remarks/{userId}")]
+      [HttpGet]
       public RemarksDTO GetRemarks(string userId)
       {
          RemarksBO remarksBO = _remarkService.GetRemarks(userId);

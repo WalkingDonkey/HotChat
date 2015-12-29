@@ -17,8 +17,9 @@ namespace HotChat.API.Controllers.V1
          _userService = userService;
       }
 
-      // POST api/<controller>/register
+      // POST api/v1/<controller>/register
       [Route("register")]
+      [HttpPost]
       public UserDTO Register(UserDTO userDTO)
       {
          UserBO userBO = _userService.Register(userDTO.Map<UserDTO, UserBO>());
