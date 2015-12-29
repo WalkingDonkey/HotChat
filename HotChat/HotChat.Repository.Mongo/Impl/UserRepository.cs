@@ -3,7 +3,6 @@ using HotChat.Framework.Utility;
 using HotChat.PO.Mongo;
 using HotChat.Repository.Interface;
 using HotChat.Repository.Mongo.Abstract;
-using MongoDB.Driver;
 using System;
 
 namespace HotChat.Repository.Mongo.Impl
@@ -18,17 +17,31 @@ namespace HotChat.Repository.Mongo.Impl
 
       public UserBO Register(UserBO userBO)
       {
-         string userId = Guid.NewGuid().ToString();
-         userBO.UserId = userId;
+         if (userBO == null)
+         {
+            throw new ArgumentNullException("userBO");
+         }
+
+         if (NameExist(userBO.UserName))
+         {
+            throw new Exception(string.Format("The user name \"{0}\" already exists.", userBO.UserName));
+         }
+
+         userBO.UserId = Guid.NewGuid().ToString();
          Add(userBO.Map<UserBO, UserPO>());
          return userBO;
       }
 
-      public bool Exist(string userId)
+      private bool IdExist(string userId)
       {
-         var collection = GetCollection();
-         var filter = Builders<UserPO>.Filter.Eq("_id", userId);
-         return collection.Find(filter).First() != null;
+         var filter = EqFilter("_id", userId);
+         return Count(filter) != 0;
+      }
+
+      private bool NameExist(string userName)
+      {
+         var filter = EqFilter("UserName", userName);
+         return Count(filter) != 0;
       }
    }
 }

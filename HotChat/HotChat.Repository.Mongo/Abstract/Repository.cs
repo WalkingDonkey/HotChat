@@ -19,30 +19,38 @@ namespace HotChat.Repository.Mongo.Abstract
          _db = client.GetDatabase("HotChat");
       }
 
-      public IMongoCollection<TEntity> GetCollection()
-      {
-         return _db.GetCollection<TEntity>(_collectionName);
-      }
-
       public virtual void Add(TEntity entity)
       {
-         IMongoCollection<TEntity> collection = GetCollection();
-         collection.InsertOne(entity);
+         GetCollection().InsertOne(entity);
       }
 
-      public virtual void Delete(TKey key)
-      {
-      }
+      //public virtual void Delete(TKey key)
+      //{
+      //}
 
       //public virtual void Update(FilterDefinition<TEntity> filter, UpdateDefinition<TEntity> updater)
       //{
       //   GetCollection().FindOneAndUpdate(filter, updater);
       //}
 
-      public virtual bool Exist<T>(T filter)
+      protected TEntity First(FilterDefinition<TEntity> filter)
       {
-         return true;
-         //return GetCollection().Count(filter) != 0;
+         return Find(filter).First();
+      }
+
+      protected IFindFluent<TEntity, TEntity> Find(FilterDefinition<TEntity> filter)
+      {
+         return GetCollection().Find(filter);
+      }
+
+      protected TEntity FindOneAndUpdate(FilterDefinition<TEntity> filter, UpdateDefinition<TEntity> updater)
+      {
+         return GetCollection().FindOneAndUpdate(filter, updater);
+      }
+
+      protected long Count(FilterDefinition<TEntity> filter)
+      {
+         return GetCollection().Count(filter);
       }
 
       protected FilterDefinition<TEntity> EqFilter<TValue>(string field, TValue value)
@@ -53,6 +61,11 @@ namespace HotChat.Repository.Mongo.Abstract
       protected UpdateDefinition<TEntity> PushUpdater<TValue>(string field, TValue value)
       {
          return Builders<TEntity>.Update.Push(field, value);
+      }
+
+      private IMongoCollection<TEntity> GetCollection()
+      {
+         return _db.GetCollection<TEntity>(_collectionName);
       }
    }
 }

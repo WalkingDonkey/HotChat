@@ -8,8 +8,8 @@
 
       // CRUD
       void Add(TEntity entity);
-      void Delete(TKey key);
+      //void Delete(TKey key);
       //void Update<T1, T2>(T1 query1,T2 query2);
-      bool Exist<T>(T query);
+      //bool Exist<T>(T query);
    }
 }
