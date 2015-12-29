@@ -51,6 +51,10 @@
       <Project>{0ff0afac-3261-49dc-8b5c-abefa54b692b}</Project>
       <Name>HotChat.BO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HotChat.Common\HotChat.Common.csproj">
+      <Project>{de6e8d40-1016-4b0c-b7fc-48c6929bba83}</Project>
+      <Name>HotChat.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

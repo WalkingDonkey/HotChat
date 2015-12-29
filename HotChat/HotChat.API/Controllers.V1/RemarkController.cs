@@ -1,8 +1,8 @@
 ﻿using HotChat.BO;
+using HotChat.Common;
 using HotChat.DTO;
 using HotChat.Framework.Utility;
 using HotChat.Service.Interface;
-using System.Collections.Generic;
 using System.Web.Http;
 
 namespace HotChat.API.Controllers.V1
@@ -18,10 +18,18 @@ namespace HotChat.API.Controllers.V1
       }
 
       // POST api/<controller>/add
-      [Route("add")]
+      [Route("remark")]
       public void AddRemark(RemarkDTO remarkDTO)
       {
-         _remarkService.Add(remarkDTO.Map<RemarkDTO, RemarkBO>());
+         _remarkService.AddRemark(remarkDTO.ToUserId, remarkDTO.Map<RemarkDTO, Remark>());
+      }
+
+      // GET api/<controller>/get
+      [Route("remarks/{userId}")]
+      public RemarksDTO GetRemarks(string userId)
+      {
+         RemarksBO remarksBO = _remarkService.GetRemarks(userId);
+         return remarksBO.Map<RemarksBO, RemarksDTO>();
       }
    }
 }

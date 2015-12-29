@@ -7,8 +7,8 @@
     <ProjectGuid>{08BC1E35-02ED-4D63-8EA8-5D6C794E8CA0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HotChat.DAO</RootNamespace>
-    <AssemblyName>HotChat.DAO</AssemblyName>
+    <RootNamespace>HotChat.PO.Mongo</RootNamespace>
+    <AssemblyName>HotChat.PO.Mongo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -57,8 +57,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemarksDAO.cs" />
-    <Compile Include="UserDAO.cs" />
+    <Compile Include="RemarksPO.cs" />
+    <Compile Include="UserPO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

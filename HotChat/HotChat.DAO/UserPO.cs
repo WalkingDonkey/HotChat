@@ -1,8 +1,8 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 
-namespace HotChat.DAO
+namespace HotChat.PO.Mongo
 {
-   public class UserDAO
+   public class UserPO
    {
       [BsonId]
       public string UserId { get; set; }

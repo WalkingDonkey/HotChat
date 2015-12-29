@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using HotChat.BO;
-using HotChat.DAO;
+using HotChat.Common;
 using HotChat.DTO;
+using HotChat.PO.Mongo;
 
 namespace HotChat.Framework.Utility
 {
@@ -11,10 +12,10 @@ namespace HotChat.Framework.Utility
       {
          Mapper.CreateMap<UserBO, UserDTO>();
          Mapper.CreateMap<UserDTO, UserBO>();
-         Mapper.CreateMap<UserBO, UserDAO>();
-         Mapper.CreateMap<UserDAO, UserBO>();
-         Mapper.CreateMap<RemarkDTO, RemarkBO>();
-         Mapper.CreateMap<RemarkBO, Remark>();
+         Mapper.CreateMap<UserBO, UserPO>();
+         Mapper.CreateMap<UserPO, UserBO>();
+         Mapper.CreateMap<RemarkDTO, Remark>();
+         Mapper.CreateMap<RemarksBO, RemarksDTO>();
       }
    }
 

@@ -31,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.Service.Interface",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{89B80A4F-8F6D-49B1-8407-097A06D9B0A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.DAO", "HotChat.DAO\HotChat.DAO.csproj", "{08BC1E35-02ED-4D63-8EA8-5D6C794E8CA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.PO.Mongo", "HotChat.DAO\HotChat.PO.Mongo.csproj", "{08BC1E35-02ED-4D63-8EA8-5D6C794E8CA0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.Common", "HotChat.Common\HotChat.Common.csproj", "{DE6E8D40-1016-4B0C-B7FC-48C6929BBA83}"
 EndProject

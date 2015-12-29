@@ -1,11 +1,13 @@
-﻿using HotChat.Common;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace HotChat.BO
+namespace HotChat.Common
 {
-   public class RemarkBO
+   public class Remark
    {
-      public string ToUserId { get; set; }
       public string FromUserId { get; set; }
       public string FromUserName { get; set; }
       public string Avatar { get; set; }

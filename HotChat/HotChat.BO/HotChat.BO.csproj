@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RemarkBO.cs" />
+    <Compile Include="RemarksBO.cs" />
     <Compile Include="UserBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

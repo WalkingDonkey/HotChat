@@ -1,9 +1,11 @@
 ﻿using HotChat.BO;
+using HotChat.Common;
 
 namespace HotChat.Repository.Interface
 {
    public interface IRemarkRepository
    {
-      void Add(RemarkBO remarkBO);
+      void AddRemark(string userId, Remark remark);
+      RemarksBO GetRemarks(string userId);
    }
 }

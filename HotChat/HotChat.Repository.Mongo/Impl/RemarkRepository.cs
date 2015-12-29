@@ -1,15 +1,14 @@
 ﻿using HotChat.BO;
-using HotChat.DAO;
+using HotChat.Common;
 using HotChat.Framework.Utility;
+using HotChat.PO.Mongo;
 using HotChat.Repository.Interface;
 using HotChat.Repository.Mongo.Abstract;
 using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
 
 namespace HotChat.Repository.Mongo.Impl
 {
-   public class RemarkRepository : Repository<RemarksDAO, string>, IRemarkRepository
+   public class RemarkRepository : Repository<RemarksPO, string>, IRemarkRepository
    {
       private const string _collectionName = "Remarks";
       public RemarkRepository()
@@ -17,22 +16,34 @@ namespace HotChat.Repository.Mongo.Impl
       {
       }
 
-      public void Add(RemarkBO remarkBO)
+      public void AddRemark(string userId, Remark remark)
       {
-         string toUserId = remarkBO.ToUserId;
          var collection = GetCollection();
-         var filter = Builders<RemarksDAO>.Filter.Eq("UserId", toUserId);
-         var updater = Builders<RemarksDAO>.Update.Push("Remarks", remarkBO.Map<RemarkBO, Remark>());
+         var filter = Builders<RemarksPO>.Filter.Eq("UserId", userId);
+         var updater = Builders<RemarksPO>.Update.Push("Remarks", remark);
          if (collection.Count(filter) == 0)
          {
-            RemarksDAO dao = new RemarksDAO(toUserId);
-            dao.Add(remarkBO.Map<RemarkBO, Remark>());
-            collection.InsertOne(dao);
+            RemarksPO po = new RemarksPO(userId);
+            po.Add(remark);
+            collection.InsertOne(po);
          }
          else
          {
             collection.FindOneAndUpdate(filter, updater);
          }
+      }
+
+      public RemarksBO GetRemarks(string userId)
+      {
+         RemarksBO remarkBO = new RemarksBO();
+         var collection = GetCollection();
+         var filter = Builders<RemarksPO>.Filter.Eq("UserId", userId);
+         if (collection.Count(filter) != 0)
+         {
+            remarkBO.Remarks = collection.Find(filter).First().Remarks;
+         }
+
+         return remarkBO;
       }
    }
 }

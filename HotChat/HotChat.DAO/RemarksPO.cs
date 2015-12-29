@@ -1,22 +1,11 @@
 ﻿using HotChat.Common;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using System;
 using System.Collections.Generic;
 
-namespace HotChat.DAO
+namespace HotChat.PO.Mongo
 {
-   public class Remark
-   {
-      public string FromUserId { get; set; }
-      public string FromUserName { get; set; }
-      public string Avatar { get; set; }
-      public Rating Rating { get; set; }
-      public string Comment { get; set; }
-      public DateTime CreatedOn { get; set; }
-   }
-
-   public class RemarksDAO
+   public class RemarksPO
    {
       [BsonId]
       [BsonRepresentation(BsonType.ObjectId)]
@@ -24,12 +13,12 @@ namespace HotChat.DAO
       public string UserId { get; set; }
       public List<Remark> Remarks { get; set; }
 
-      public RemarksDAO()
+      public RemarksPO()
       {
          Remarks = new List<Remark>();
       }
 
-      public RemarksDAO(string userId)
+      public RemarksPO(string userId)
       {
          UserId = userId;
          Remarks = new List<Remark>();

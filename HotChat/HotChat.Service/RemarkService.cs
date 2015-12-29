@@ -1,4 +1,5 @@
 ﻿using HotChat.BO;
+using HotChat.Common;
 using HotChat.Repository.Interface;
 using HotChat.Service.Interface;
 
@@ -13,9 +14,14 @@ namespace HotChat.Service.Impl
          _remarkRepository = remarkRepository;
       }
 
-      public void Add(RemarkBO remarkBO)
+      public void AddRemark(string userId, Remark remark)
       {
-         _remarkRepository.Add(remarkBO);
+         _remarkRepository.AddRemark(userId, remark);
+      }
+
+      public RemarksBO GetRemarks(string userId)
+      {
+         return _remarkRepository.GetRemarks(userId);
       }
    }
 }

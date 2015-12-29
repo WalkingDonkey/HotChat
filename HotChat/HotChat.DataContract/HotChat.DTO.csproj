@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RemarksDTO.cs" />
     <Compile Include="RemarkDTO.cs" />
     <Compile Include="UserDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
