@@ -4,6 +4,7 @@ using HotChat.PO.Mongo;
 using HotChat.Repository.Interface;
 using HotChat.Repository.Mongo.Abstract;
 using System;
+using System.Security.Authentication;
 
 namespace HotChat.Repository.Mongo.Impl
 {
@@ -15,7 +16,7 @@ namespace HotChat.Repository.Mongo.Impl
       {
       }
 
-      public UserBO Register(UserBO userBO)
+      public UserBO SignUp(UserBO userBO)
       {
          if (userBO == null)
          {
@@ -30,6 +31,28 @@ namespace HotChat.Repository.Mongo.Impl
          userBO.UserId = Guid.NewGuid().ToString();
          Add(userBO.Map<UserBO, UserPO>());
          return userBO;
+      }
+
+      public UserBO SignIn(UserBO userBO)
+      {
+         if (userBO == null)
+         {
+            throw new ArgumentNullException("userBO");
+         }
+
+         var filter = EqFilter("UserId", userBO.UserId);
+         if (Count(filter) == 0)
+         {
+            throw new Exception(string.Format("The user id \"{0}\" doesn't exist.", userBO.UserId));
+         }
+
+         var userPO = First(filter);
+         if(userBO.Password != userPO.Password)
+         {
+            throw new AuthenticationException("Your password is invalid.");
+         }
+
+         return userPO.Map<UserPO, UserBO>();
       }
 
       private bool IdExist(string userId)

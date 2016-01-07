@@ -2,8 +2,9 @@
 
 namespace HotChat.Repository.Interface
 {
-    public interface IUserRepository
-    {
-        UserBO Register(UserBO userBO);
-    }
+   public interface IUserRepository
+   {
+      UserBO SignUp(UserBO userBO);
+      UserBO SignIn(UserBO userBO);
+   }
 }
