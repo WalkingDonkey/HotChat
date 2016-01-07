@@ -56,8 +56,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoursePO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemarksPO.cs" />
+    <Compile Include="TeacherPO.cs" />
     <Compile Include="UserPO.cs" />
   </ItemGroup>
   <ItemGroup>

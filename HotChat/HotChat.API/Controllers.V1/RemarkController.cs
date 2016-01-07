@@ -22,15 +22,15 @@ namespace HotChat.API.Controllers.V1
       [HttpPost]
       public void AddRemark(RemarkDTO remarkDTO)
       {
-         _remarkService.AddRemark(remarkDTO.ToUserId, remarkDTO.Map<RemarkDTO, Remark>());
+         _remarkService.AddRemark(remarkDTO.CourseId, remarkDTO.ToUserId, remarkDTO.Map<RemarkDTO, Remark>());
       }
 
       // GET api/v1/<controller>/remarks/<userId>
-      [Route("remarks/{userId}")]
+      [Route("remarks/{userId}/{courseId}")]
       [HttpGet]
-      public RemarksDTO GetRemarks(string userId)
+      public RemarksDTO GetRemarks(string userId, string courseId)
       {
-         RemarksBO remarksBO = _remarkService.GetRemarks(userId);
+         RemarksBO remarksBO = _remarkService.GetRemarks(userId, courseId);
          return remarksBO.Map<RemarksBO, RemarksDTO>();
       }
    }

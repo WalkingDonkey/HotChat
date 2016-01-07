@@ -11,22 +11,26 @@ namespace HotChat.PO.Mongo
       [BsonRepresentation(BsonType.ObjectId)]
       public string Id { get; set; }
       public string UserId { get; set; }
-      public List<Remark> Remarks { get; set; }
+      public Dictionary<string, List<Remark>> Course2Remarks { get; set; }
 
       public RemarksPO()
       {
-         Remarks = new List<Remark>();
+         Course2Remarks = new Dictionary<string, List<Remark>>();
       }
 
       public RemarksPO(string userId)
       {
          UserId = userId;
-         Remarks = new List<Remark>();
+         Course2Remarks = new Dictionary<string, List<Remark>>();
       }
 
-      public void Add(Remark remark)
+      public void Add(string courseId, Remark remark)
       {
-         Remarks.Add(remark);
+         if (!Course2Remarks.ContainsKey(courseId))
+         {
+            Course2Remarks[courseId] = new List<Remark>();
+         }
+         Course2Remarks[courseId].Add(remark);
       }
    }
 }

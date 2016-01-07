@@ -14,14 +14,14 @@ namespace HotChat.Service.Impl
          _remarkRepository = remarkRepository;
       }
 
-      public void AddRemark(string userId, Remark remark)
+      public void AddRemark(string courseId,string userId, Remark remark)
       {
-         _remarkRepository.AddRemark(userId, remark);
+         _remarkRepository.AddRemark(courseId, userId, remark);
       }
 
-      public RemarksBO GetRemarks(string userId)
+      public RemarksBO GetRemarks(string userId, string courseId)
       {
-         return _remarkRepository.GetRemarks(userId);
+         return _remarkRepository.GetRemarks(userId, courseId);
       }
    }
 }

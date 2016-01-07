@@ -14,14 +14,14 @@ namespace HotChat.Repository.Mongo.Impl
       {
       }
 
-      public void AddRemark(string userId, Remark remark)
+      public void AddRemark(string courseId, string userId, Remark remark)
       {
          var filter = EqFilter("UserId", userId);
          var updater = PushUpdater("Remark", remark);
          if (Count(filter) == 0)
          {
             RemarksPO remarksPO = new RemarksPO(userId);
-            remarksPO.Add(remark);
+            remarksPO.Add(courseId,remark);
             Add(remarksPO);
          }
          else
@@ -30,13 +30,13 @@ namespace HotChat.Repository.Mongo.Impl
          }
       }
 
-      public RemarksBO GetRemarks(string userId)
+      public RemarksBO GetRemarks(string userId, string courseId)
       {
          RemarksBO remarkBO = new RemarksBO();
          var filter = EqFilter("UserId", userId);
          if (Count(filter) != 0)
          {
-            remarkBO.Remarks = First(filter).Remarks;
+            remarkBO.Remarks = First(filter).Course2Remarks[courseId];
          }
 
          return remarkBO;

@@ -11,6 +11,8 @@ namespace HotChat.DTO
    public class RemarkDTO
    {
       [JsonProperty]
+      public string CourseId { get; set; }
+      [JsonProperty]
       public string ToUserId { get; set; }
       [JsonProperty]
       public string FromUserId { get; set; }
