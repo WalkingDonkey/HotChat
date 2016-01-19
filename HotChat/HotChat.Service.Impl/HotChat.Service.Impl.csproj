@@ -54,7 +54,7 @@
       <Project>{de6e8d40-1016-4b0c-b7fc-48c6929bba83}</Project>
       <Name>HotChat.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HotChat.Repository\HotChat.Repository.Interface.csproj">
+    <ProjectReference Include="..\HotChat.Repository.Interface\HotChat.Repository.Interface.csproj">
       <Project>{ce1cefe1-86ff-4c2e-977a-5822cb8e10f8}</Project>
       <Name>HotChat.Repository.Interface</Name>
     </ProjectReference>

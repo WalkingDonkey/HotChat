@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BL", "BL", "{A41FF9AD-3848-4612-B98D-24B9F8904F27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.Service.Impl", "HotChat.Service\HotChat.Service.Impl.csproj", "{B2015FEA-1736-4D28-A783-29708B9C9BB1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.Service.Impl", "HotChat.Service.Impl\HotChat.Service.Impl.csproj", "{B2015FEA-1736-4D28-A783-29708B9C9BB1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.BO", "HotChat.BO\HotChat.BO.csproj", "{0FF0AFAC-3261-49DC-8B5C-ABEFA54B692B}"
 EndProject
@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.DTO", "HotChat.Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.DAL", "HotChat.DAL\HotChat.DAL.csproj", "{EB8EF597-F8F6-4A06-A531-4F004C33F0D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.Repository.Interface", "HotChat.Repository\HotChat.Repository.Interface.csproj", "{CE1CEFE1-86FF-4C2E-977A-5822CB8E10F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.Repository.Interface", "HotChat.Repository.Interface\HotChat.Repository.Interface.csproj", "{CE1CEFE1-86FF-4C2E-977A-5822CB8E10F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChat.Framework", "HotChat.Framework\HotChat.Framework.csproj", "{CE40364F-0846-4E0B-8E76-05919C7FDE4E}"
 EndProject
