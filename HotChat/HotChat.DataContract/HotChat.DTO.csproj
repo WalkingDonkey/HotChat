@@ -47,6 +47,9 @@
   <ItemGroup>
     <Compile Include="RemarksDTO.cs" />
     <Compile Include="RemarkDTO.cs" />
+    <Compile Include="CourseDTO.cs" />
+    <Compile Include="TeacherProfileDTO.cs" />
+    <Compile Include="TeacherDTO.cs" />
     <Compile Include="UserDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -61,6 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\Repository.cs" />
+    <Compile Include="Impl\TeacherRepository.cs" />
+    <Compile Include="Impl\CourseRepository.cs" />
     <Compile Include="Impl\RemarkRepository.cs" />
     <Compile Include="Impl\UserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

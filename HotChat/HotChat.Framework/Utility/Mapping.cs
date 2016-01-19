@@ -16,6 +16,7 @@ namespace HotChat.Framework.Utility
          Mapper.CreateMap<UserPO, UserBO>();
          Mapper.CreateMap<RemarkDTO, Remark>();
          Mapper.CreateMap<RemarksBO, RemarksDTO>();
+         // TODO: course, teacher
       }
    }
 
