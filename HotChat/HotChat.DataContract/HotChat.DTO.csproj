@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MessageDTO.cs" />
+    <Compile Include="BillDTO.cs" />
     <Compile Include="RemarksDTO.cs" />
     <Compile Include="RemarkDTO.cs" />
     <Compile Include="CourseDTO.cs" />

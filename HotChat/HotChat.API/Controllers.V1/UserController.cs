@@ -35,6 +35,20 @@ namespace HotChat.API.Controllers.V1
          return userBO.Map<UserBO, UserDTO>();
       }
 
+      [Route("recharge")]
+      [HttpPost]
+      public void Recharge(BillDTO billDTO)
+      {
+         // TODO: call recharge service.
+      }
+
+      [Route("withdraw")]
+      [HttpPost]
+      public void Withdraw(BillDTO billDTO)
+      {
+         // TODO: call withdraw service.
+
+      }
       // GET api/<controller>
       [Route("get")]
       public IEnumerable<string> Get()
