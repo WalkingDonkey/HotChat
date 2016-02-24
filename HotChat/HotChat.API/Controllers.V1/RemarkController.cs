@@ -1,12 +1,12 @@
-﻿using HotChat.BO;
-using HotChat.Common;
-using HotChat.DTO;
-using HotChat.Framework.Utility;
-using HotChat.Service.Interface;
-using System.Web.Http;
-
-namespace HotChat.API.Controllers.V1
+﻿namespace HotChat.API.Controllers.V1
 {
+   using HotChat.BO;
+   using HotChat.Common;
+   using HotChat.DTO;
+   using HotChat.Framework.Utility;
+   using HotChat.Service.Interface;
+   using System.Web.Http;
+
    [RoutePrefix("api/v1/remark")]
    public class RemarkController : ApiController
    {
@@ -17,15 +17,15 @@ namespace HotChat.API.Controllers.V1
          _remarkService = remarkService;
       }
 
-      // POST api/v1/<controller>/
-      [Route("")]
+      // POST api/v1/{controller}/remark
+      [Route("remark")]
       [HttpPost]
       public void AddRemark(RemarkDTO remarkDTO)
       {
          _remarkService.AddRemark(remarkDTO.CourseId, remarkDTO.ToUserId, remarkDTO.Map<RemarkDTO, Remark>());
       }
 
-      // GET api/v1/<controller>/remarks/<userId>
+      // GET api/v1/{controller}/remarks/{userId}/{courseId}
       [Route("remarks/{userId}/{courseId}")]
       [HttpGet]
       public RemarksDTO GetRemarks(string userId, string courseId)

@@ -1,13 +1,9 @@
-﻿using HotChat.BO;
-using HotChat.Common;
-using HotChat.DTO;
-using HotChat.Framework.Utility;
-using HotChat.Service.Interface;
-using System.Collections.Generic;
-using System.Web.Http;
-
-namespace HotChat.API.Controllers.V1
+﻿namespace HotChat.API.Controllers.V1
 {
+   using HotChat.DTO;
+   using System.Collections.Generic;
+   using System.Web.Http;
+
    [RoutePrefix("api/v1/message")]
    public class MessageController : ApiController
    {
@@ -16,10 +12,19 @@ namespace HotChat.API.Controllers.V1
          
       }
 
-      // GET api/v1/<controller>/messages/<userId>
-      [Route("messages/{userId}")]
+      // GET api/v1/{controller}/{userId}/messages
+      [Route("{userId}/messages")]
       [HttpGet]
-      public IEnumerable<MessageDTO> GetMessages(string userId)
+      public IEnumerable<MessageDTO> GetAllMessages(string userId)
+      {
+         // TODO: call message service
+         return null;
+      }
+
+      // GET api/v1/{controller}/{userId}/messages/{fromUserId}
+      [Route("{userId}/messages/{fromUserId}")]
+      [HttpGet]
+      public IEnumerable<MessageDTO> GetMessagesFromOneUser(string userId, string fromUserId)
       {
          // TODO: call message service
          return null;
